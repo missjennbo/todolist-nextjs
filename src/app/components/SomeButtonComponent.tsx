@@ -1,0 +1,1 @@
+export const SomeButtonComponent = () => <button className="btn btn-primary">Click me!</button>;

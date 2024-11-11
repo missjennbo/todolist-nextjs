@@ -6,31 +6,27 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Nice stuff to know
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Server Side Rendering
+- next.js uses SSR (Server Side Rendering per default)
+- Client Component necessary f.e. for interactivity (button action)
+- first line directive ‚use client‘; (other inner components becomes automatically client components, not necessarily to use this directive again)
+- rule: only use client component if it is absolutely necessary (f.e. extract button to own component, the rest is still rendered on the server)
+- Instead of using something like react query in the client we only can use fetch(„url“) on the backend to fetch some data from server
 
-## Learn More
+### Routing
+- the new App Router works with paths (f.e. page.tsx file in dir /user creates a page on localhost:3000/user)
+- <Link> Component to navigate to another page (only new page is loaded from server than)
 
-To learn more about Next.js, take a look at the following resources:
+### Styling
+- CSS Module extension: <name>.module.css
+- In Component: import styles from „./<name>.module.css“
+- Names of css classes should not be like name-container, better nameContainer so it’s a valid js object property name
+- PostCSS transforms style class names to unique, generated ones so nothing can crash
+- DaisyUI: component library for Tailwind, combines tailwind classes, concept of themes (active in tailwind config file) 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
