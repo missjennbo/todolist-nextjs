@@ -22,6 +22,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ### Routing
 - the new App Router works with paths (f.e. page.tsx file in dir /user creates a page on localhost:3000/user)
 - <Link> Component to navigate to another page (only new page is loaded from server than)
+- For the new app router there are file conventions like „not-found.tsx“ do customize the error page for 404 error
+- Dynamic routes based on file system introducing a dir structure like /user/[userId]/page.tsx
 
 ### Styling
 - CSS Module extension: <name>.module.css
