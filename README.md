@@ -12,13 +12,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Nice stuff to know
 
-### Server Side Rendering
-- next.js uses SSR (Server Side Rendering per default)
-- Client Component necessary f.e. for interactivity (button action)
-- first line directive ‚use client‘; (other inner components becomes automatically client components, not necessarily to use this directive again)
-- rule: only use client component if it is absolutely necessary (f.e. extract button to own component, the rest is still rendered on the server)
-- Instead of using something like react query in the client we only can use fetch(„url“) on the backend to fetch some data from server
-
 ### Routing
 - the new App Router works with paths (f.e. page.tsx file in dir /user creates a page on localhost:3000/user)
 - <Link> Component to navigate to another page (only new page is loaded from server than)
@@ -32,3 +25,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - PostCSS transforms style class names to unique, generated ones so nothing can crash
 - DaisyUI: component library for Tailwind, combines tailwind classes, concept of themes (active in tailwind config file) 
 
+### Server Side Rendering
+- next.js uses SSR (Server Side Rendering per default)
+- Client Component necessary f.e. for interactivity (button action)
+- first line directive ‚use client‘; (other inner components becomes automatically client components, not necessarily to use this directive again)
+- rule: only use client component if it is absolutely necessary (f.e. extract button to own component, the rest is still rendered on the server)
+- Instead of using something like react query in the client we only can use fetch(„url“) on the backend to fetch some data from server
+
+![Rendering in next.js](./public/nextjs_rendering.png)
