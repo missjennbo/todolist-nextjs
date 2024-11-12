@@ -1,13 +1,13 @@
 import React from 'react';
 import {TaskListComponent} from "@/app/components/TaskListComponent";
-import Link from "next/link";
+import {NavbarComponent} from "@/app/components/NavbarComponent";
 
-const UserPage = () => {
+const UserPage = async ({params}: { params: { userId: number } }) => {
+    const {userId} = await params;
     return (
         <>
-            <Link href="/">Back</Link>
-            <h1>Todos of User 1</h1>
-            <TaskListComponent></TaskListComponent>
+            <NavbarComponent/>
+            <TaskListComponent userId={userId}/>
         </>
     );
 };
