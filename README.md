@@ -37,3 +37,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ### State Management 
 - still needed if the client side get less complex? [you can find a good overview here](https://www.youtube.com/watch?v=VenLRGHx3D4&t=602s)
 - idea: it is possible to map state logic to url (especially using SSR)
+
+### Server Actions 
+- form Element has an action attribute
