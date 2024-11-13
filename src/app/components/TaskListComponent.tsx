@@ -28,11 +28,9 @@ export const TaskListComponent = async ({userId}: { userId: number }) => {
                     <th>Description</th>
                 </tr>
                 </thead>
-                {tasks.map(task =>
-                    <div key={task.id}>
-                        <TaskListEntryComponent task={task}/>
-                    </div>
-                )}
+                <tbody>
+                {tasks.map(task => <TaskListEntryComponent key={task.id} task={task}/>)}
+                </tbody>
             </table>
         </div>)
 };
