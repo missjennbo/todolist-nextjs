@@ -5,7 +5,7 @@ import {NavbarComponent} from "@/app/components/NavbarComponent";
 export default function Home() {
     return (
         <main>
-            <NavbarComponent/>
+            <NavbarComponent text={"Tasks for you"}/>
             <UserDropdownComponent/>
         </main>
     );

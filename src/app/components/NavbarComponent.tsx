@@ -1,7 +1,6 @@
 import React from "react";
-import Link from "next/link";
 
-export const NavbarComponent = () =>
+export const NavbarComponent = ({text}: {text: string}) =>
     <div className="navbar bg-blue-200">
-        <Link href="/" className="text-xl pl-5">Tasks for  you</Link>
+        <p>{text}</p>
     </div>;

@@ -1,6 +1,3 @@
-'use client';
-
-import React from "react";
 import {Task} from "@/app/types/types";
 
 export const TaskListEntryComponent = ({task}: {task: Task}) => {
