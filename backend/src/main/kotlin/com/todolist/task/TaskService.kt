@@ -1,6 +1,6 @@
-package com.example.backend.task
+package com.todolist.task
 
-import com.example.backend.user.UserInfoRepository
+import com.todolist.user.UserInfoRepository
 import org.springframework.stereotype.Service
 
 @Service

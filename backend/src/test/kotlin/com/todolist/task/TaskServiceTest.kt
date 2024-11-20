@@ -1,7 +1,7 @@
-package com.example.backend.task
+package com.todolist.task
 
-import com.example.backend.user.UserInfo
-import com.example.backend.user.UserInfoRepository
+import com.todolist.user.UserInfo
+import com.todolist.user.UserInfoRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test

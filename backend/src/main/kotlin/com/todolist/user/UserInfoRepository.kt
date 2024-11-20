@@ -1,4 +1,4 @@
-package com.example.backend.user
+package com.todolist.user
 
 import jakarta.persistence.*
 import org.springframework.data.jpa.repository.JpaRepository

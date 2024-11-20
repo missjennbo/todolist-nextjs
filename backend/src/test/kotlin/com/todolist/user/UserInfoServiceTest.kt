@@ -1,4 +1,4 @@
-package com.example.backend.user
+package com.todolist.user
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.BeforeEach

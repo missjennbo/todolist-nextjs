@@ -1,4 +1,4 @@
-package com.example.backend.user
+package com.todolist.user
 
 import org.springframework.http.ResponseEntity
 import org.springframework.stereotype.Controller
