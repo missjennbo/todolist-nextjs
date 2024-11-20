@@ -1,0 +1,38 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+coverage/
+
+### IntelliJ IDEA ###
+.idea/*
+!.idea/codeStyles/
+*.iws
+*.iml
+*.ipr
+
+# docToolChain
+build_doc/
+.doctoolchain/
+.groovy/
+.java/
+.DS_Store
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+frontend/node_modules
+
+# next.js
+frontend/.next/
+frontend/out/
+
+# production
+frontend/build
+
+# debug
+frontend/npm-debug.log*
+
+# typescript
+frontend/next-env.d.ts
+

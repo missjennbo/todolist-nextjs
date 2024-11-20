@@ -1,0 +1,13 @@
+
+services:
+  postgreslocal:
+    container_name: postgres_local_container
+    image: postgres:12
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: changeme
+    ports:
+      - "5433:5432"
+
+
+

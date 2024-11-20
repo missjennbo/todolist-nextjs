@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/postgres
+    username: postgres
+    password: changeme
+  flyway:
+    url: jdbc:postgresql://localhost:5433/postgres
+    user: postgres
+    password: changeme
+    create-schemas: true
+    schemas: public
+    locations: classpath:db/migration
+
