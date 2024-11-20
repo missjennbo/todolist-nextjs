@@ -1,12 +1,12 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Another boring todo app to learn next.js
+# Another boring todo app to learn next.js
 
-First, run the development server:
+## Local setup
 
-```bash
-npm run dev
-```
+- start the postgres db within a local docker container `docker compose up` 
+- start the backend application
+- run the frontend development server with `npm run dev`
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -32,7 +32,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - rule: only use client component if it is absolutely necessary (f.e. extract button to own component, the rest is still rendered on the server)
 - Instead of using something like react query in the client we only can use fetch(„url“) on the backend to fetch some data from server
 
-![Rendering in next.js](./public/nextjs_rendering.png)
+![Rendering in next.js](frontend/public/nextjs_rendering.png)
 
 ### State Management
 - still needed if the client side get less complex? [you can find a good overview here](https://www.youtube.com/watch?v=VenLRGHx3D4&t=602s)
@@ -47,7 +47,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - a deployed next.js app on Vercel will create serverless functions (only pay what you use)
 - serverless functions useful for small tasks (not for long-running tasks, chron jobs etc.)
 
-![next.js Server Side](./public/nextjs_server.png)
+![next.js Server Side](frontend/public/nextjs_server.png)
 
 ## Database
 - used a local postgres database that runs in a docker container.
