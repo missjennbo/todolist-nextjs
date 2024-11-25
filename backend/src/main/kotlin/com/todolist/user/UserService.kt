@@ -11,4 +11,8 @@ class UserService(private val userRepository: UserInfoRepository) {
     fun getUserById(userId: Long): UserInfo? {
         return userRepository.findUserInfoById(userId)
     }
+
+    fun validateUser(userId: Long) {
+        userRepository.findUserInfoById(userId) ?: throw Exception("User not found")
+    }
 }
