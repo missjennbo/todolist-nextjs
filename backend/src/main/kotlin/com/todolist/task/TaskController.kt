@@ -32,8 +32,17 @@ class TaskController(
         return ResponseEntity.ok().body(taskService.addTaskFor(request.userId, request.description))
     }
 
+    @PostMapping("/mark")
+    fun markTask(@RequestBody request: MarkTaskRequest): ResponseEntity<Task>{
+        return ResponseEntity.ok().body(taskService.markTask(request.taskId))
+    }
+
     data class AddTaskRequest(
         val userId: Long,
         val description: String
+    )
+
+    data class MarkTaskRequest(
+        val taskId: Long
     )
 }

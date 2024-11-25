@@ -6,7 +6,7 @@ export interface User {
 
 export interface Task {
     userId: number,
-    id?: number,
+    id: number,
     description: string,
     done: false
 }
