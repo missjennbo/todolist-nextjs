@@ -10,7 +10,7 @@ import java.time.format.DateTimeFormatter
 
 
 @Controller
-@RequestMapping("/tasks")
+@RequestMapping("/task")
 class TaskController(
     private val taskService: TaskService
 ) {
@@ -21,11 +21,7 @@ class TaskController(
     }
 
     @GetMapping("/{userId}")
-    fun getTasksForUser(@PathVariable("userId") userId: Long): ResponseEntity<TaskListDto> {
-        return ResponseEntity.ok().body(TaskListDto(taskService.getTasksFor(userId)))
+    fun getTasksForUser(@PathVariable("userId") userId: Long): ResponseEntity<List<Task>> {
+        return ResponseEntity.ok().body(taskService.getTasksFor(userId))
     }
-
-    data class TaskListDto (
-     val tasks: List<Task>
-    )
 }

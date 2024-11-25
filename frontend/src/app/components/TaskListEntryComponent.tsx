@@ -5,6 +5,6 @@ export const TaskListEntryComponent = ({task}: {task: Task}) => {
         <td>
             <input type="checkbox" className="checkbox"/>
         </td>
-        <td>{task.title}</td>
+        <td>{task.description}</td>
     </tr>;
 }

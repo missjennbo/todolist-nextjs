@@ -1,12 +1,12 @@
 export interface User {
     id: number,
-    username: string,
+    email: string,
     name: string
 }
 
 export interface Task {
     userId: number,
     id?: number,
-    title: string,
-    completed: false
+    description: string,
+    done: false
 }
