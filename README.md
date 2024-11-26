@@ -24,6 +24,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Names of css classes should not be like name-container, better nameContainer so it’s a valid js object property name
 - PostCSS transforms style class names to unique, generated ones so nothing can crash
 - DaisyUI: component library for Tailwind, combines tailwind classes, concept of themes (active in tailwind config file)
+- Use <Image> component by next.js to optimize image load and performance 
 
 ### Server Side Rendering
 - next.js uses SSR (Server Side Rendering per default)
@@ -41,6 +42,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ### Server Actions
 - 'use server'; directive on top of function body (Server Component)
 - to call a Server Action in a Client Component, create a new file and add the "use server" directive at the top of it
+- with the method `revalidateTag("tagname")` next.js revalidates the local cache by tag
 
 ### Backend
 - I can still use a custom server written with kotlin etc. (long-running server)

@@ -76,4 +76,11 @@ class TaskServiceTest {
 
         assertTrue(taskRepository.findById(testTask.id!!).get().done!!)
     }
+
+    @Test
+    fun `should throw error for not existing task`() {
+        assertThrows<Exception> { taskService.deleteTask(2222) }.let {
+            assertThat(it.message).isEqualTo("Task not found")
+        }
+    }
 }

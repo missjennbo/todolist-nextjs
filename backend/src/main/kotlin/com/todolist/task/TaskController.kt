@@ -32,17 +32,19 @@ class TaskController(
         return ResponseEntity.ok().body(taskService.addTaskFor(request.userId, request.description))
     }
 
-    @PostMapping("/mark")
-    fun markTask(@RequestBody request: MarkTaskRequest): ResponseEntity<Task>{
-        return ResponseEntity.ok().body(taskService.markTask(request.taskId))
+    @PostMapping("/mark/{taskId}")
+    fun markTask(@PathVariable("taskId") taskId: Long): ResponseEntity<Task>{
+        return ResponseEntity.ok().body(taskService.markTask(taskId))
     }
 
-    data class AddTaskRequest(
-        val userId: Long,
-        val description: String
-    )
-
-    data class MarkTaskRequest(
-        val taskId: Long
-    )
+    @DeleteMapping("/delete/{taskId}")
+    fun deleteTask(@PathVariable("taskId") taskId: Long): ResponseEntity<Unit> {
+        taskService.deleteTask(taskId)
+        return ResponseEntity.ok().build()
+    }
 }
+
+data class AddTaskRequest(
+    val userId: Long,
+    val description: String
+)

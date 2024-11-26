@@ -29,4 +29,10 @@ class TaskService(
         task.done = !task.done!!
         return taskRepository.save(task)
     }
+
+    fun deleteTask(taskId: Long) {
+        val task = taskRepository.findById(taskId)
+        if (!task.isPresent) throw Exception("Task not found")
+        taskRepository.delete(task.get())
+    }
 }
