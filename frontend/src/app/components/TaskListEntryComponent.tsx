@@ -24,7 +24,7 @@ export const TaskListEntryComponent = ({task}: { task: Task }) => {
         <td>{task.description}</td>
         <td>
             <button onClick={onDeleteClick} className="btn btn-circle btn-sm">
-                <Image src="/delete-icon.svg" alt="delete-icon" width={30} height={30}/>
+                <Image src="/delete-icon.svg" alt="delete-icon" width={20} height={20}/>
             </button>
         </td>
     </tr>;

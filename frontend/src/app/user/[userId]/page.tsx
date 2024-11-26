@@ -13,7 +13,7 @@ const UserPage = async ({params}: { params: { userId: number } }) => {
     return (
         <>
             <NavbarComponent text={`Tasks of ${user.name}`}/>
-            <div className="p-6 space-y-4">
+            <div className="p-6 space-y-10">
                 <Link href={"/"} className="btn">Back</Link>
                 <AddTaskFormComponent userId={user.id}/>
                 <TaskListComponent tasks={tasks}/>

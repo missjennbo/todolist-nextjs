@@ -27,7 +27,7 @@ export const AddTaskFormComponent = ({userId}: { userId: number }) => {
 
     return <form id="add-task-form" onSubmit={handleSubmit(onSubmit)} className="space-x-2">
         <input {...register("newTaskDescription", {required: true})} placeholder="Enter new task ..."
-               className="input input-bordered"></input>
+               className="input input-bordered w-1/2"></input>
         <button type="submit" className="btn">{isPending ? "Adding ..." : "Add task"}</button>
     </form>;
 };
