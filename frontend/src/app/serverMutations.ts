@@ -3,10 +3,9 @@
 import {revalidateTag} from "next/cache";
 
 const headers = {'Content-type': 'application/json; charset=UTF-8',};
-const backendUrl = `http://localhost:8080`;
 
 export const addTask = async (userId: number, description: string) =>
-    fetch(`${backendUrl}/task/create`, {
+    fetch(`${process.env.BACKEND_URL}/task/create`, {
         method: 'POST',
         body: JSON.stringify({userId, description}),
         headers,
@@ -17,7 +16,7 @@ export const addTask = async (userId: number, description: string) =>
     }).catch((error) => console.log(`Error: ${error}`))
 
 export const markTask = async (taskId: number) =>
-    fetch(`${backendUrl}/task/mark/${taskId}`, {
+    fetch(`${process.env.BACKEND_UR}/task/mark/${taskId}`, {
         method: 'POST',
         headers,
         next: {tags: ["tasks"]}
@@ -27,7 +26,7 @@ export const markTask = async (taskId: number) =>
     }).catch((error) => console.log(`Error: ${error}`))
 
 export const deleteTask = async (taskId: number) => {
-    fetch(`${backendUrl}/task/delete/${taskId}`, {
+    fetch(`${process.env.BACKEND_UR}/task/delete/${taskId}`, {
         method: 'DELETE',
         headers,
         next: {tags: ["tasks"]}

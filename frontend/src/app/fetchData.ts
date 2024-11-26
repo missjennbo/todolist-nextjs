@@ -1,18 +1,16 @@
 import {Task, User} from "@/app/types/types";
 
-const backendUrl = "http://localhost:8080";
-
 export const fetchTasksFor = async (userId: number): Promise<Task[]> => {
-    const result = await fetch(`${backendUrl}/task/${userId}`);
+    const result = await fetch(`${process.env.BACKEND_URL}/task/${userId}`);
     return await result.json();
 };
 
 export const fetchUserInfoFor = async (userId: number): Promise<User> => {
-    const result = await fetch(`${backendUrl}/user/${userId}`);
+    const result = await fetch(`${process.env.BACKEND_URL}/user/${userId}`);
     return await result.json();
 };
 
 export const fetchUsers = async (): Promise<User[]> => {
-    const result = await fetch(`${backendUrl}/user`);
+    const result = await fetch(`${process.env.BACKEND_URL}/user`);
     return await result.json();
 };

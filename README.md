@@ -12,6 +12,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Nice stuff to know
 
+### next.js
+- environment variables can be saved in .env files (accessible via `process.env.<variable_name>`)
+
 ### Routing
 - the new App Router works with paths (f.e. page.tsx file in dir /user creates a page on localhost:3000/user)
 - <Link> Component to navigate to another page (only new page is loaded from server than)
