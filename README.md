@@ -25,6 +25,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - PostCSS transforms style class names to unique, generated ones so nothing can crash
 - DaisyUI: component library for Tailwind, combines tailwind classes, concept of themes (active in tailwind config file)
 - Use <Image> component by next.js to optimize image load and performance 
+- useTransition is a React Hook to change styling while something is a pending state
 
 ### Server Side Rendering
 - next.js uses SSR (Server Side Rendering per default)
